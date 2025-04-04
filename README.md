@@ -80,7 +80,7 @@ Start the server
   npm start
 ```
 
-- Open http://localhost:5173/
+- Open http://localhost:3000/
 
 
 ## Tech Stack

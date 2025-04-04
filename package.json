@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "opener http://localhost:5173",
+    "test": "opener http://localhost:3000",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" \"npm test\"",
     "start:frontend": "cd client && npm run dev",
     "start:backend": "cd server && npm start",

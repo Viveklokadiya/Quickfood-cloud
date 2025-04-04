@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 6001;
+const port = process.env.PORT || 3500;
 const mongoose = require("mongoose");
 const jwt = require('jsonwebtoken');
 require('dotenv').config()
@@ -10,16 +10,22 @@ require('dotenv').config()
 app.use(cors());
 app.use(express.json());
 
+const connection = require("./db");
+
+
+connection();
+
 // mongodb configuration using mongoose
 
-mongoose
-  .connect(
-    process.env.MONGO_URI
-  )
-  .then(
-    console.log("MongoDB Connected Successfully!")
-  )
-  .catch((error) => console.log("Error connecting to MongoDB", error));
+// mongoose
+//   .connect(
+//     process.env.MONGO_URI
+//   )
+//   .then(
+//     console.log("MongoDB Connected Successfully!")
+//   )
+//   .catch((error) => console.log("Error connecting to MongoDB", error));
+
 
   // jwt authentication
   app.post('/jwt', async(req, res) => {
